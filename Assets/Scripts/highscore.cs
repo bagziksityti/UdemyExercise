@@ -24,7 +24,12 @@ public class highscore : MonoBehaviour
     
     private void OnCollisionEnter(Collision collision)
     {
-        hit++;
-        Debug.Log("you bumped into thing this many times: " + hit);
+
+        if (collision.gameObject.tag != "hit")
+        {
+            hit++;
+            Debug.Log("you bumped into thing this many times: " + hit);
+        }
+            
     }
 }

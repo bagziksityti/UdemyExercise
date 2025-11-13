@@ -1,11 +1,16 @@
+using Unity.Cinemachine;
 using UnityEngine;
 
 public class hit : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Collision detected with " + collision.gameObject.name);
-        GetComponent<Renderer>().material.color = Color.red;
+        if (collision.gameObject.tag == "Player")
+        {
+            Debug.Log("Collision detected with " + collision.gameObject.name);
+            GetComponent<MeshRenderer>().material.color = Color.red;
+            gameObject.tag = "hit";
+        }
     }
     void Start()
     {
