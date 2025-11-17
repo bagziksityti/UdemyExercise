@@ -16,14 +16,16 @@ public class triggerProject : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-
-        if (other.gameObject.tag == ("Player"))
+        if (projectile1 && projectile2 && projectile3 && projectile4 != null)
         {
-            projectile1.SetActive(true);
-            projectile2.SetActive(true);
-            projectile3.SetActive(true);
-            projectile4.SetActive(true);
-            
+            if (other.gameObject.tag == ("Player"))
+            {
+                projectile1.SetActive(true);
+                projectile2.SetActive(true);
+                projectile3.SetActive(true);
+                projectile4.SetActive(true);
+
+            }
         }
     }
 }
