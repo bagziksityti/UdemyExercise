@@ -3,35 +3,27 @@ using UnityEngine;
 public class triggerProject : MonoBehaviour
 {
 
-    [SerializeField] GameObject[] projectile;
+    [SerializeField] GameObject projectile1;
+    [SerializeField] GameObject projectile2;
+    [SerializeField] GameObject projectile3;
+    [SerializeField] GameObject projectile4;
+    
+
     void Start()
     {
-        projectile = new GameObject[4];
-        for (int i = 0; i < projectile.Length; i++)
-        {
-            projectile[i] = new GameObject;
-
-        }
+        
     }
     private void OnTriggerEnter(Collider other)
     {
 
 
         if (other.gameObject.tag == ("Player"))
-
         {
-            for (int i = 0; i < projectile.Length; i++)
-            {
-                if (projectile[i] != null)
-                {
-                    projectile[i].SetActive(true);
-                }
-                if (projectile[i].transform.position == other.transform.position)
-                {
-                    Destroy(projectile[i]);
-                }
-
-            }
+            projectile1.SetActive(true);
+            projectile2.SetActive(true);
+            projectile3.SetActive(true);
+            projectile4.SetActive(true);
+            
         }
     }
 }
