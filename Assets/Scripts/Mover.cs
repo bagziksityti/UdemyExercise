@@ -4,6 +4,7 @@ public class Mover : MonoBehaviour
 {
 
     [SerializeField]float moveSpeed = 10f;
+    [SerializeField] float dify; 
 
 
 
@@ -30,8 +31,10 @@ public class Mover : MonoBehaviour
     {
 
         float x = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
-        float y = 0f; // Made y serializable to adjust in the Inspector
+        float y = Input.GetAxis("Jump")*Time.deltaTime*moveSpeed; 
         float z = Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed;
-        transform.Translate(x, y, z);
+        
+        transform.Translate(x, y*dify, z);
+
     }
 }

@@ -2755,8 +2755,12 @@ PrefabInstance:
       value: ThePlayer
       objectReference: {fileID: 0}
     - target: {fileID: 1655635347727410674, guid: d3ceae6577602c74ca0ca80cc8fb647d, type: 3}
+      propertyPath: y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1655635347727410674, guid: d3ceae6577602c74ca0ca80cc8fb647d, type: 3}
       propertyPath: dify
-      value: 0.74
+      value: 0.12
       objectReference: {fileID: 0}
     - target: {fileID: 5641518754378779962, guid: d3ceae6577602c74ca0ca80cc8fb647d, type: 3}
       propertyPath: m_LocalPosition.x
